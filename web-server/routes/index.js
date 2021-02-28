@@ -69,7 +69,7 @@ router.post('/api/searchgoods', (req, res) => {
             sqlStr += " OR goods_name LIKE ";
         }
     });
-   var connect = conn.query(sqlStr, (error, results, fields) => {
+   conn.query(sqlStr, (error, results, fields) => {
         results = JSON.parse(JSON.stringify(results));
         console.log(results);
         if (!error && results.length) {
@@ -78,7 +78,7 @@ router.post('/api/searchgoods', (req, res) => {
             console.log(error);
         }
     });
-    console.log(connect);
+    
 });
 
 /**
