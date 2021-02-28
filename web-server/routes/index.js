@@ -58,6 +58,9 @@ router.get('/api/category', (req, res) => {
  * 模糊搜索(商品名称)，
  * 模糊搜索(商品名称)，
  * 模糊搜索(商品名称)，
+ * 模糊搜索(商品名称)，
+ * 模糊搜索(商品名称)，
+ * 模糊搜索(商品名称)，
  * 
  */
 router.post('/api/searchgoods', (req, res) => {
