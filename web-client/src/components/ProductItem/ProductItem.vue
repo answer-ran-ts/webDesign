@@ -4,7 +4,7 @@
 		<div class="pro_text">
 			<p><em>{{ pro.price / 100 | moneyFormat }}</em></p>
 			<p>{{ pro.short_name }}</p>
-			<p>西二商城自营店</p>
+			<p>小小书丛</p>
 		</div>
 		<div class="add_btn">
 			<a @click="goDetail(pro.goods_id)"><el-button type="danger">查看详情</el-button></a>

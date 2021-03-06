@@ -1,0 +1,2 @@
+webpackJsonp([19],{IsYD:function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var i={render:function(){var t=this.$createElement;return(this._self._c||t)("div",{attrs:{id:"admin-sales"}},[this._v("\n  待完善\n")])},staticRenderFns:[]};var s=n("VU/8")({},i,!1,function(t){n("tRti")},"data-v-0b33a7c4",null);e.default=s.exports},tRti:function(t,e){}});
+//# sourceMappingURL=19.97b49737594419cc76e1.js.map

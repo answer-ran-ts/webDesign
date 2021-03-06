@@ -1,7 +1,7 @@
 <template>
 		<div class="header_nav">
 			<div>
-        <p>嗨~欢迎来到西二商城</p>
+        <p>嗨~欢迎来到小小书丛</p>
         <div class="locationWrapper">
            <svg viewBox="0 0 32 32" class="icon iconLocation">
                 <path fill="#81838E" fill-rule="evenodd"
