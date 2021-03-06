@@ -264,6 +264,7 @@
 		width: 980px;
 		height: 200px;
 	}
+	
 	.pro_1{
 		width:100%;
 		text-align:center;
