@@ -72,10 +72,12 @@ router.get('/api/category', (req, res) => {
 router.post('/api/searchgoods', (req, res) => {
     // 获取参数
     let keywords = req.body.keywords;
-	keywords = keywords.replace(/\s+/g, ' ');
-	keywords = keywords.replace(/(^\s*)|(\s*$)/g, '');
+	keywords = keywords.replace(/\s+/g, ' ');  
+	keywords = keywords.replace(/(^\s*)|(\s*$)/g, ''); //去除两端空格
     let keyArr = keywords.split(' ');
-    let sqlStr = 'SELECT * FROM recommend WHERE goods_name LIKE ';  // sql语句
+    // let sqlStr = 'SELECT * FROM recommend WHERE goods_name LIKE "%甲%"';  // sql语句
+    // let sqlStr = 'SELECT * FROM recommend WHERE goods_name LIKE "%甲%" OR goods_name LIKE "%手机%"';  // sql语句
+    let sqlStr = 'SELECT * FROM recommend WHERE goods_name LIKE';  // sql语句
     keyArr.forEach((item, index, arr)=>{
         sqlStr += "'%" + item + "%'";
         if(index != arr.length-1){
