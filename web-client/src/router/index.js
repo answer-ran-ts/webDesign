@@ -1,7 +1,7 @@
 // 1. 引入对应模块
 import Vue from 'vue'
 import VueRouter  from 'vue-router'
-
+// 一级路由
 const Home = ()=> import('./../pages/Home/Home');
 const Login = ()=> import('./../pages/Login/Login');
 const Search = ()=> import('./../pages/Search/Search');
@@ -12,11 +12,14 @@ const AdminLogin = ()=> import('./../pages/AdminLogin/AdminLogin');
 const Admin = ()=> import('./../pages/Admin/Admin');
 const SearchDetail = ()=> import('./../pages/SearchDetail/SearchDetail');
 
+// 嵌套Me组件下的子路由
 const Profile = ()=> import('./../pages/Me/Children/Profile');
 const Update = ()=> import('./../pages/Me/Children/Update');
 const EditPwd = ()=> import('./../pages/Me/Children/EditPwd');
 const EditPhone = ()=> import('./../pages/Me/Children/EditPhone');
 const Sales = ()=> import('./../pages/Me/Children/Sales');
+
+// 嵌套Admin组件下的子路由
 const AdminSales = ()=> import('./../pages/Admin/Children/AdminSales');
 const AddGoods = ()=> import('./../pages/Admin/Children/AddGoods');
 const AdminGoods = ()=> import('./../pages/Admin/Children/AdminGoods');
@@ -33,7 +36,7 @@ export default  new VueRouter({
 	{
 	  path: '/home',
 	  component: Home,
-	  meta: {showHeaderTop: true, showHeaderSearch: true}
+	  // meta: {showHeaderTop: true, showHeaderSearch: true}
 	},
 	{
 	  path: '/login',
@@ -45,6 +48,7 @@ export default  new VueRouter({
 	  meta: {showHeaderTop: true, showHeaderSearch: true}
   },
   {
+    // 动态路由匹配，根据
 	  path: '/goods/:id',
 	  component: Goods,
 	  meta: {showHeaderTop: true}
@@ -52,12 +56,14 @@ export default  new VueRouter({
   {
 	  path: '/me',
     component: Me,
+    // 配置嵌套路由
     children: [
       {path: 'profile', component: Profile},
       {path: 'update', component: Update},
       {path: 'editpwd', component: EditPwd},
       {path: 'editphone', component: EditPhone},
       {path: 'sales', component: Sales},
+      // 路由重定向到profile
       {path: '/me',redirect: '/me/profile'}
     ],
   },
@@ -73,6 +79,7 @@ export default  new VueRouter({
   {
 	  path: '/admin',
     component: Admin,
+    // 配置嵌套路由
     children: [
       {path: 'adminsales', component: AdminSales},
       {path: 'adminusers', component: AdminUsers},

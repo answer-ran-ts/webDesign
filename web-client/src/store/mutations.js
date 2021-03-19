@@ -16,7 +16,7 @@ import {
   DEL_ALL_GOODS,
   SEARCH_KEYWORDS
 } from './mutation-types'
-
+// 通过提交mutation，改变state的值
 export default {
   [HOME_CASUAL](state, {homecasual}) {
     state.homecasual = homecasual;

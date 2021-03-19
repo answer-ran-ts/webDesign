@@ -4,9 +4,11 @@
       <router-link class="navbar-brand col-sm-3 col-md-2 mr-0" to="/home">小小书丛</router-link>
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
+          <!-- prevent阻止默认事件（a）,goBack函数 this.$router.replace("/home") 返回商城 -->
           <a class="nav-link" @click.prevent="goBack">返回商城</a>
         </li>
         <li class="nav-item text-nowrap">
+          <!-- logout函数的原理，清除localStorage (userInfo),执行路由跳转this.$router.replace("/home") 返回商城 -->
           <a class="nav-link" @click="logout">退出登录</a>
         </li>
       </ul>
@@ -23,6 +25,7 @@
             <el-menu
               default-active="1"
               class="el-menu-vertical-demo">
+              <!-- goto(path)传入一个路由参数，点击替换成当前路由，实现路由的跳转 -->
               <el-menu-item index="1"  @click="goTo('/me/profile')">
                 <i class="el-icon-document-copy"></i>
                 <span slot="title">我的资料</span>

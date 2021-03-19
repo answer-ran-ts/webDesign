@@ -80,6 +80,7 @@
 			        showClose: true,
           });
           this.adminInfo.user_name = this.user_name;
+          console.log(result);
           this.$router.replace('/admin');
           window.localStorage.setItem("adminInfo",JSON.stringify(this.adminInfo));
           window.localStorage.removeItem("userInfo");

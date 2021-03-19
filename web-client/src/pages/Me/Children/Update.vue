@@ -19,6 +19,7 @@
       </div>
       <div class="user-item">
         <span>手机</span>
+        <!-- 当数据不存在时，给定一个默认值，暂未设置 -->
         <span>{{ userInfo.user_phone || "暂未设置" }}</span>
       </div>
       <div class="user-item">

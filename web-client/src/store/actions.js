@@ -32,6 +32,7 @@ import {
   SEARCH_KEYWORDS
 } from './mutation-types'
 
+// 存放异步操作
 export default {
   // 获取首页的轮播图
   async reqHomeCasual({commit}) {
@@ -70,7 +71,7 @@ export default {
   },
 
   // 同步用户的信息
-  syncUserInfo({commit}, userInfo){
+   syncUserInfo({commit}, userInfo){
     commit(USER_INFO, {userInfo});
   },
 
