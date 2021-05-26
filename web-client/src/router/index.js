@@ -36,7 +36,7 @@ export default  new VueRouter({
 	{
 	  path: '/home',
 	  component: Home,
-	  // meta: {showHeaderTop: true, showHeaderSearch: true}
+	  meta: {showHeaderTop: true, showHeaderSearch: true}
 	},
 	{
 	  path: '/login',

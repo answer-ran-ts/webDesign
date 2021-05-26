@@ -7,11 +7,9 @@
           <el-button type="danger" icon="el-icon-search" @click="postSearch"></el-button>
 				</div>
 				<p>
-					<a>自营日满减</a>
-					<a>西二女装</a>
 					<a>笔记本电脑</a>
 					<a>电子书</a>
-					<a>限时秒杀</a>
+					<a>手机</a>
 				</p>
 		</div>
 		<div class="shopping_bag">

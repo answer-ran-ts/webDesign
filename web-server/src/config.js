@@ -9,11 +9,15 @@ export default {
 
 	host: '127.0.0.1', // 数据库的地址
 	// user: 'root', // 账号
-	user: 'admin', // 账号
+	// user: 'admin', // 账号
+	// // password: '****', // 密码
+	// password: '123456', // 密码
+	// database: 'web_shop', // 数据库名称
+	
+	user: 'rq', // 账号
 	// password: '****', // 密码
 	password: '123456', // 密码
-	database: 'web_shop', // 数据库名称
-	
+	database: 'shopping', // 数据库名称
 	secret: '123456',  // session
 	maxAge: 1000 * 60 * 60 * 6  // session保存6个小时
 }

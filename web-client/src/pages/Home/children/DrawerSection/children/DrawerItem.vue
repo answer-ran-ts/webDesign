@@ -1,6 +1,6 @@
 <template>
   <div class="pro_item">
-    <h4 class="item_title"><span>小小书丛</span><span class="item_one">{{goods.price / 100 | moneyFormat}}</span></h4>
+    <h4 class="item_title"><span>有好物</span><span class="item_one">{{goods.price / 100 | moneyFormat}}</span></h4>
     <div class="item_content">
       <div class="pro_Chk">
         <input type="checkbox" class="pro_ChkElem" :checked="goods.checked" @click="singleSelected(goods)">
