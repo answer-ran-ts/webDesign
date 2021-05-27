@@ -64,7 +64,7 @@
 					<span class="txt">合计（不含运费）：</span>
 					<strong class="selected_price">{{totalPrice | moneyFormat(totalPrice)}}</strong>
 				</div>
-				<div class="btn-area">
+				<div class="btn-area" @click="payAll()">
 					<a class="btn-sumbit" :class="{'btn-allow': totalAmount}">结&nbsp;算</a>
 				</div>
 			</div>
@@ -173,6 +173,12 @@
           });
         });
       },
+			payAll(){
+				this.$message({
+					type:"success",
+					message:`所有商品总价为${this.totalPrice}元`
+				})
+			}
     },
   }
 </script>
@@ -364,17 +370,19 @@
     font-size: 20px;
     line-height: 50px;
 }
+.btn-area:hover{
+	background: red;
+	color: #FFF;
+}
 .btn-area>.btn-sumbit{
-	display: inline-block;
-	background: #B0B0B0;
-    color: #fff;
-    border-left: 1px solid #e7e7e7;
+		display: inline-block;
+    color: #000;
     width: 119px;
     height: 50px;
-    cursor: not-allowed;
     text-align: center;
     line-height: 50px;
     font-size: 20px;
+		cursor: pointer;
 }
 .btn-area>.btn-sumbit.btn-allow{
 	background: #f22d00;

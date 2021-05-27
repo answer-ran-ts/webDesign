@@ -5,7 +5,8 @@
       </div>
 			<ul>
 				<li v-if="!userInfo.id">
-					<router-link to="/login">您好,请登录</router-link><router-link to="/login">免费注册</router-link>
+					<router-link to="/login">您好,请登录</router-link>
+          <router-link to="/register">免费注册</router-link>
 				</li>
 				<li v-else>
 					<a v-if="userInfo.user_nickname">您好,{{ userInfo.user_nickname }}</a>
@@ -23,13 +24,9 @@
   import {mapState} from 'vuex';
   import {mapActions} from 'vuex'
   import { MessageBox } from 'element-ui';
-  // 引入三级联动的城市数据
-
   export default {
     data(){
-      return{
-      
-      }
+      return{}
     },
     mounted() {},
     computed: {

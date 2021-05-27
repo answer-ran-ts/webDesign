@@ -4,6 +4,7 @@ import VueRouter  from 'vue-router'
 // 一级路由
 const Home = ()=> import('./../pages/Home/Home');
 const Login = ()=> import('./../pages/Login/Login');
+const Register = ()=> import('./../pages/Register/Register');
 const Search = ()=> import('./../pages/Search/Search');
 const Goods = ()=> import('./../pages/Goods/Goods');
 const Me = ()=> import('./../pages/Me/Me');
@@ -42,6 +43,10 @@ export default  new VueRouter({
 	  path: '/login',
 	  component: Login
 	},
+  {
+    path:'/register',
+    component:Register
+  },
 	{
 	  path: '/search/:id/:pageNo',
 	  component: Search,

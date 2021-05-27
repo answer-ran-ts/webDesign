@@ -40,7 +40,7 @@
               </span>
             </div>
             <div class="pro_cashier">
-              <el-button type="danger" :disabled="!totalAmount">结算</el-button>
+              <el-button type="danger" :disabled="!totalAmount" @click="payGoods">结算</el-button>
             </div>
           </div>
         </div>
@@ -52,6 +52,8 @@
   // 引入处理返回顶部的函数
   import {animate} from "@/config/utils"
   import DrawerItem from './children/DrawerItem'
+  import { MessageBox } from 'element-ui';
+
   import { mapState } from 'vuex'
 
   export default {
@@ -78,6 +80,13 @@
       },
       goToShop(){
         this.$emit('goShopCar');
+      },
+      payGoods(){
+          MessageBox({
+              type: 'success',
+              message: "结算成功",
+			        showClose: true,
+          });
       },
       // 是否选中所有商品
       selectedAll(isSelectedAll){

@@ -44,7 +44,7 @@
 					<div class="pro_meg_deliver">
 						<dl>
 							<dt>运费</dt>
-							<dd>福建福州&nbsp;&nbsp;至&nbsp;&nbsp;福建福州&nbsp;&nbsp;&nbsp;快递:0.00</dd>
+							<dd>安徽省合肥市&nbsp;&nbsp;至&nbsp;&nbsp;安徽省合肥市&nbsp;&nbsp;&nbsp;快递:10.00</dd>
 						</dl>
 					</div>
 					<div class="pro_meg_console">
@@ -71,12 +71,12 @@
               <h6 class="media-heading" v-if="comment.user_nickname">用户:&nbsp;{{ comment.user_nickname }}</h6>
               <h6 class="media-heading" v-else>用户:&nbsp;{{ comment.user_name | nameFormat }}</h6>
               <span>评论:</span>&nbsp;{{comment.comment_detail}}
-              <el-rate
+              <!-- <el-rate
                 v-model="comment.comment_rating"
                 disabled
                 show-score
                 text-color="#ff9900">
-              </el-rate>
+              </el-rate> -->
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ let tmp_captcha = '';
 /* GET home page. */
 router.get('/', (req, res, next) => {
     console.log(md5(md5("admin") + S_KEY))
-    res.render('index', {title: '西二商城'});
+    res.render('index', {title: '有好物'});
 });
 
 /**************************************** 前台商城 ****************************************** */
@@ -53,22 +53,7 @@ router.get('/api/category', (req, res) => {
     });
 });
 
-/**
- * 模糊搜索(商品名称)，
- * 模糊搜索(商品名称)，
- * 模糊搜索(商品名称)，
- * 模糊搜索(商品名称)，
- * 模糊搜索(商品名称)，
- * 模糊搜索(商品名称)，
- * 模糊搜索(商品名称)，
- * 模糊搜索(商品名称)，
- * 模糊搜索(商品名称)，
- * 模糊搜索(商品名称)，
- * 模糊搜索(商品名称)，
- * 模糊搜索(商品名称)，
- * 模糊搜索(商品名称)，
- * 
- */
+// 关键词查询
 router.post('/api/searchgoods', (req, res) => {
     // 获取参数
     let keywords = req.body.keywords;
@@ -86,7 +71,6 @@ router.post('/api/searchgoods', (req, res) => {
     });
    conn.query(sqlStr, (error, results, fields) => {
         results = JSON.parse(JSON.stringify(results));
-        console.log(results);
         if (!error && results.length) {
             res.json({success_code: 200, message: results});
         }else{

@@ -150,7 +150,11 @@
           formData.append('category', this.$refs[formName].model.category);
           formData.append('goods_img', this.fileList[0].raw);
 
-          let result = await addGoodsToRecom(formData);
+this.$message({
+  type:"success",
+  message:"上架成功"
+})
+          // let result = await addGoodsToRecom(formData);
           /*
               let result = await addGoodsToRecom({
                 goods_id: this.$refs[formName].model.goods_id,
@@ -162,24 +166,24 @@
                 category: this.$refs[formName].model.category
               });
           */
-          if(result.success_code === 200){
-            this.$message({
-              type: 'success',
-              message: '添加成功'
-            });
-            this.$router.replace('/admin');
-            getAllgoods();
-          }else if(result.success_code === 500){
-            this.$message({
-              type: 'info',
-              message: '商品已存在'
-            });
-          }else{
-            this.$message({
-              type: 'error',
-              message: '添加失败'
-            });
-          }
+          // if(result.success_code === 200){
+          //   this.$message({
+          //     type: 'success',
+          //     message: '添加成功'
+          //   });
+          //   this.$router.replace('/admin');
+          //   getAllgoods();
+          // }else if(result.success_code === 500){
+          //   this.$message({
+          //     type: 'info',
+          //     message: '商品已存在'
+          //   });
+          // }else{
+          //   this.$message({
+          //     type: 'error',
+          //     message: '添加失败'
+          //   });
+          // }
         }
       },
       resetForm(formName) {

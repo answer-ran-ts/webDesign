@@ -12,9 +12,9 @@
 					<a>手机</a>
 				</p>
 		</div>
-		<div class="shopping_bag">
+		<!-- <div class="shopping_bag">
 			<a @click.prevent="goShopCar"><i class="el-icon-shopping-cart-2"></i>&nbsp;&nbsp;我的购物车</a>
-		</div>
+		</div> -->
 	</div>
 </template>
 
